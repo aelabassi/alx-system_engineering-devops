@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # print Hi at 9 iteration
 
-i=1
+i=0
 while [ $i -lt 10 ];
 do
     if [ $i -eq 9 ];

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#content of the current directory
+
+contents=$(ls)
+for con in $contents;
+do
+    echo "$con" | cut -d '-' -f2
+done

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# print Hi at 9 iteration
+
+i=1
+while [ $i -lt 10 ];
+do
+    if [ $i -eq 9 ];
+    then
+        echo "Hi"
+    fi
+    echo "Best School"
+    (( i = i + 1 ))
+done

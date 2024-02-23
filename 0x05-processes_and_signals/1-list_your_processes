@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# dispalys running processes including all user's, and hierarchy
+# including those which might not have TTY
+ps -auxf

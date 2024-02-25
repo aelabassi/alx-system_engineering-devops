@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# simple parse of an apache lo file in a sorted and unique outpurs
+awk '{print $1 " " $9}' apache-access.log | sort | uniq -c | sort -rn

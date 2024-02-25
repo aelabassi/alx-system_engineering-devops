@@ -10,7 +10,7 @@ while true;
 do
     echo "To inifnity and beyond"
     sleep 2
-    trap 'echo "Y U love me?!" ' SIGINT
-    tarp 'echo "I hate the kill command " && terminate ' SIGTERM
+    trap 'echo "Y U no love me?!" ' SIGINT
+    trap 'echo "I hate the kill command " && terminate ' SIGTERM
     trap 'terminate' SIGQUITgit
 done

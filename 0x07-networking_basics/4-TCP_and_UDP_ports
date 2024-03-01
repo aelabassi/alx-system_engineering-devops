@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# diplays the lestening ports
+# shows listening sockets
+# and PID, name of the program
+netstat -l --program

@@ -1,0 +1,4 @@
+# ssh config file that refuse to authenticate with password
+Host *
+    PasswordAuthentication no
+    IdentityFile ~/.ssh/school

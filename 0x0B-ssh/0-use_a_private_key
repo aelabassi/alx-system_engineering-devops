@@ -1,0 +1,4 @@
+#!/bin/bash
+# bash script that uses ssh to connect to a remote server using a private key ~/.ssh/school
+# with the user ubuntu
+ssh -i ~/.ssh/school ubuntu@54.237.5.6

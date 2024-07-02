@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# fix Empty reply from server bug
+sudo service apache2 start

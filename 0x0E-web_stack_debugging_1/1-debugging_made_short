@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# debugging script for nginx service
+sed -i 's/8080/80/' /etc/nginx/sites-available/default
+service nginx restart
+kill -9 $(pgrep nginx)

@@ -9,7 +9,8 @@ echo "Hello World" > /var/www/html/index.html
 touch /var/www/html/404.html
 echo "Ceci n'est pas une page" > /var/www/html/404.html
 
-printf %s "server {
+printf %s "
+server {
     listen 80 default_server;
     listen [::]:80 default_server;
 
@@ -20,10 +21,8 @@ printf %s "server {
 
     add_header X-Served-By $HOSTNAME;
 
-    location /redirect_me {
-        rewrite ^ https://github/aelbassi permanent;
-    }
-    error_page 404 /404.html;
+    rewrite ^/redirect_me https://github.com/aelabassi permanent;
+    error_pag  404 /404.html;
     location = /404.html {
         internal;
     }

@@ -9,8 +9,8 @@ echo "Hello World" > /var/www/html/index.html
 touch /var/www/html/404.html
 echo "Ceci n'est pas une page" > /var/www/html/404.html
 
-printf %s "
-server {
+server_config=\
+"server {
     listen 80 default_server;
     listen [::]:80 default_server;
 
@@ -22,8 +22,16 @@ server {
     add_header X-Served-By $HOSTNAME;
 
     rewrite ^/redirect_me https://github.com/aelabassi permanent;
-    error_pag  404 /404.html;
+    error_pag 404 /404.html;
     location = /404.html {
         internal;
     }
-}" > /etc/nginx/sites-available/default
+}" 
+echo "$server_config" | sudo dd status=none of=/etc/nginx/sites-available/default
+
+if [ "$(pgrep -c nginx)" -le 0 ]; then
+	sudo service nginx start
+else
+	sudo service nginx restart
+fi
+

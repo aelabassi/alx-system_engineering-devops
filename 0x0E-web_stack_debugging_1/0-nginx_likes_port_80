@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 # debguuging script for nginx service
 # check if ngiinx in lestening on port 80
-
-cd /etc/nginx/sites-available/ || exit;
-rm default;
-ln -s /etc/nginx/sites-available/default default;
-service nginx restart;
+sudo sed -i "s/8080/80/" /etc/nginx/sites-avialble/default
+sudo service nginx restart

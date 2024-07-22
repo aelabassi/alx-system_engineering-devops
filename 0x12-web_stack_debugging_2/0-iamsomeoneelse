@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# whoami
+someone="$1"
+su -c "$someone"
+whoami

@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 # whoami
-someone="$1"
-su -c "$someone"
-whoami
+function Whoami(){
+    if [ -z "$1" ]; then
+        echo -e "I never met this guy in my life"
+    else
+        sudo su "$1" -s /bin/bash --command=whoami
+    fi
+}
+Whoami "$1"

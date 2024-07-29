@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Send request ton RESTAPI
 retrieve employees and tasks"""
+import json
 import requests
 import sys
-import json
 
 headers = {
     "Content-Type": "application/json",

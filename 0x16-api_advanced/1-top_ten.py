@@ -4,7 +4,11 @@ import requests
 
 
 def top_ten(subreddit):
-    """ gets the top 10 hot posts in a subreddit """
+    """
+    gets the top 10 hot posts in a subreddit
+    Args:
+        subreddit (str): subreddit to search
+    """
     url = "https://www.reddit.com/r/{}/hot.json?limit=10".format(subreddit)
     headers = {
         'User-Agent': 'Mozilla/5.0'

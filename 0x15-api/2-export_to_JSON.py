@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Send request ton RESTAPI
+"""Send request to RESTAPI
 retrieve employees and tasks"""
 import json
 import requests

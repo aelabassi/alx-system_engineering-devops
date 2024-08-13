@@ -5,7 +5,7 @@ import requests
 
 def number_of_subscribers(subreddit):
     """
-    gets the number of sub scribers in a subreddit
+    gets the number of sub subscribers in a subreddit
     Args:
         subreddit (str): subreddit to search
 

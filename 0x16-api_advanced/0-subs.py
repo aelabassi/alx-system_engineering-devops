@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 """ Get the number of subscribers in a subreddit """
 import requests
-import sys
 
 
-def get_number_subscribers(subreddit):
+def number_of_subscribers(subreddit):
     """ gets the number of sub scribers in a subreddit """
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
     headers = {

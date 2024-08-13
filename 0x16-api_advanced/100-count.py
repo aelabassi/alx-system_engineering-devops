@@ -4,7 +4,15 @@ import requests
 
 
 def count_words(subreddit, word_list, counts={}, after=None, count=0):
-    """ gets the number of appearance of a keyword in a subreddit """
+    """
+    gets the number of appearance of a keyword in a subreddit
+    Args:
+        subreddit (str): subreddit to search
+        word_list (list): list of keywords to search
+        counts (dict): dictionary of keywords and their counts
+        after (str): after token
+        count (int): count of keywords found so far
+    """
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     headers = {
         'User-Agent': 'Mozilla/5.0'
@@ -14,7 +22,8 @@ def count_words(subreddit, word_list, counts={}, after=None, count=0):
         'after': after,
         'count': count
     }
-    response = requests.get(url, headers=headers, params=params, allow_redirects=False)
+    response = requests.get(url, headers=headers, params=params,
+                            allow_redirects=False)
     try:
         result = response.json()
         if response.status_code != 200:
@@ -30,7 +39,8 @@ def count_words(subreddit, word_list, counts={}, after=None, count=0):
         title = post['data']['title']
         for word in word_list:
             if word.lower() in title.lower().split():
-                word_count = len([t for t in title.lower().split() if t == word.lower()])
+                word_count = len([t for t in title.lower().split()
+                                  if t == word.lower()])
                 if counts.get(word) is None:
                     counts[word] = word_count
                 else:

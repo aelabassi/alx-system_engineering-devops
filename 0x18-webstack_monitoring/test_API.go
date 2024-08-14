@@ -26,4 +26,6 @@ func main() {
 
 	responseContent, _ := json.MarshalIndent(resp, "", "  ")
 	fmt.Fprintf(os.Stdout, "Response from `HostsApi.GetHostTotals`:\n%s\n", responseContent)
+
+	Getdashbaords()
 }
